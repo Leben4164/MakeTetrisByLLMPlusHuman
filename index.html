@@ -9,16 +9,23 @@
 </head>
 
 <body>
-  <!-- 제목을 game-area 밖으로 빼내어 별도 관리 -->
   <h1 class="title">TETRIS</h1>
 
   <div class="app-container">
-    <!-- 메인 게임 영역 (정가운데 배치됨) -->
+    <!-- 게임 오버 모달 (초기엔 숨김 처리) -->
+    <div id="game-over-modal" class="hidden">
+      <h2>GAME OVER</h2>
+      <div class="score-display">
+        <p>SCORE: <span id="modal-score">0</span></p>
+        <p class="high-score">HIGH SCORE: <span id="modal-highscore">0</span></p>
+      </div>
+      <button id="restart-btn">다시하기</button>
+    </div>
+
     <div class="game-area">
       <canvas id="tetris" width="300" height="600"></canvas>
     </div>
 
-    <!-- 오른쪽 사이드 패널 -->
     <div class="side-panel">
       <div class="info-box">
         <h2>NEXT</h2>
