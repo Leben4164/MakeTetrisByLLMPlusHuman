@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catppuccin Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- 메인 게임 영역 -->
+    <div class="game-area">
+      <h1 class="title">TETRIS</h1>
+      <!-- 테트리스 맵: 가로 10칸, 세로 20칸 (블록 하나 30px 기준) -->
+      <canvas id="tetris" width="300" height="600"></canvas>
+    </div>
+
+    <!-- 오른쪽 사이드 패널 -->
+    <div class="side-panel">
+      <div class="info-box">
+        <h2>NEXT</h2>
+        <!-- 다음 블록 표시 (4x4 칸) -->
+        <canvas id="next-block" width="120" height="120"></canvas>
+      </div>
+      <div class="info-box">
+        <h2>SCORE</h2>
+        <span id="score">0</span>
+      </div>
+    </div>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+
+</html>
